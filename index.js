@@ -57,7 +57,7 @@ const glowMesh = new THREE.Mesh(geometry, fresnelMat);
 glowMesh.scale.setScalar(1.01);
 earthGroup.add(glowMesh);
 
-const stars = getStarfield({numStars: 200});
+const stars = getStarfield({numStars: 2000});
 scene.add(stars);
 
 const sunLight = new THREE.DirectionalLight(0xffffff, 2.0);
