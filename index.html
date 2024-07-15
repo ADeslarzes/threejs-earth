@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Robot Bobby Earth</title>
+    <title>3D Simulation</title>
     <style>
       body {
         margin: 0;
       }
     </style>
     <script type="importmap">
-			{
-				"imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
-          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+          "jsm/controls/OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/controls/OrbitControls.js"
         }
-			}
-		</script>
+      }
+    </script>
+    <script src="https://unpkg.com/satellite.js/dist/satellite.js"></script>
   </head>
   <body>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="index.js">
+    </script>
   </body>
 </html>
