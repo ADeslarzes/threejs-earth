@@ -112,7 +112,7 @@ function addSatellite(tle, name, color) {
   const satelliteMaterial = new THREE.MeshStandardMaterial({
     color: color,
     emissive: color,
-    emissiveIntensity: 1,
+    emissiveIntensity: 5,
     metalness: 1,
     roughness: 0,
   });
@@ -130,7 +130,7 @@ function addSatellite(tle, name, color) {
 }
 
 // Load TLE data
-fetch('/data/data.json')
+fetch('/data/data_2.json')
   .then(response => response.json())
   .then(data => {
     Object.entries(data).forEach(([name, sat]) => {
@@ -162,10 +162,12 @@ function updateSatellitePosition(satelliteData, gmst) {
 
 
 ////////////////////////////////////// Satellites ///////////////////////////////////////
-const earthRotationSpeed = 2 * Math.PI / 5184000; // Earth's rotation speed in radians per frame
+const earthRotationSpeed = 2 * Math.PI/8640 ; // Earth's rotation speed in radians per frame
 
 function animate() {
   requestAnimationFrame(animate);
+
+  console.log(earthRotationSpeed);
   earthMesh.rotation.y += earthRotationSpeed;  
   lightsMesh.rotation.y += earthRotationSpeed;
   cloudsMesh.rotation.y += earthRotationSpeed*2;
