@@ -6,6 +6,7 @@ import { getFresnelMat } from "./src/getFresnelMat.js";
 
 // scale : 1 unit = 6378 km
 
+
 const w = window.innerWidth;
 const h = window.innerHeight;
 const scene = new THREE.Scene();
